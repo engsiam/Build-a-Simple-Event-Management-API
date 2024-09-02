@@ -217,7 +217,7 @@ Ensure you have the following installed on your local machine:
 
 ## **Postman Collection**
 
-You can import this [Postman collection](#) to test the API endpoints easily.
+You can import this [Postman collection](https://documenter.getpostman.com/view/19239340/2sAXjM5C3P) to test the API endpoints easily.
 
 ## **Security**
 
