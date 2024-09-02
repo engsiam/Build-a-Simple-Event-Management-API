@@ -1,3 +1,7 @@
+### **Updated GitHub README**
+
+---
+
 # **Event Management API**
 
 ## **Objective**
@@ -6,12 +10,12 @@ This project is a RESTful API for managing events, allowing users to create, upd
 
 ## **Features**
 
-- Create, update, delete, and list events.
+- Create, update, and delete events.
 - Manage participants for each event.
 - Prevent time conflicts between events at the same location.
 - Handle large datasets efficiently with pagination.
 - Secure API with JWT authentication.
-- SQL injection prevention.
+- Rate limiting to protect against abuse.
 
 ## **Tech Stack**
 
@@ -168,20 +172,6 @@ Ensure you have the following installed on your local machine:
   ```
 - **Description:** Creates a new event.
 
-#### **List Events**
-- **URL:** `/api/events`
-- **Method:** `GET`
-- **Headers:** 
-  - `Authorization: Bearer <your-jwt-token>`
-- **Description:** Lists all events with pagination.
-
-#### **Get Event by ID**
-- **URL:** `/api/events/:id`
-- **Method:** `GET`
-- **Headers:** 
-  - `Authorization: Bearer <your-jwt-token>`
-- **Description:** Retrieves the details of a specific event by ID.
-
 #### **Update Event**
 - **URL:** `/api/events/:id`
 - **Method:** `PUT`
@@ -212,8 +202,6 @@ Ensure you have the following installed on your local machine:
 #### **Add Participants**
 - **URL:** `/api/events/:id/participants`
 - **Method:** `POST`
-- **Headers:** 
-  - `Authorization: Bearer <your-jwt-token>`
 - **Body:**
   ```json
   {
@@ -225,8 +213,6 @@ Ensure you have the following installed on your local machine:
 #### **Remove Participant**
 - **URL:** `/api/events/:id/participants/:participantId`
 - **Method:** `DELETE`
-- **Headers:** 
-  - `Authorization: Bearer <your-jwt-token>`
 - **Description:** Removes a participant from an event.
 
 ## **Postman Collection**
@@ -237,7 +223,7 @@ You can import this [Postman collection](#) to test the API endpoints easily.
 
 - **JWT Authentication:** Used to secure API endpoints.
 - **Input Validation:** All input data is validated and sanitized to prevent SQL injection.
-- **Rate Limiting:** Consider implementing rate limiting to protect against brute-force attacks.
+- **Rate Limiting:** Implemented on event listing and retrieval to protect against brute-force attacks.
 
 ## **Handling Large Data**
 
@@ -252,6 +238,3 @@ If you'd like to contribute to this project, please fork the repository and subm
 
 This project is licensed under the MIT License.
 
----
-
-Replace the placeholders like `your-username`, `yourpassword`, and `your_jwt_secret` with the actual values you use. This README provides a comprehensive guide for anyone looking to set up, run, and interact with your Event Management API.

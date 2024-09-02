@@ -14,6 +14,6 @@ router.get('/events/:id',eventRateLimiter,eventController.getEventById);
 router.put('/events/:id',authenticateToken,validateEvent,eventController.updateEvent);
 router.delete('/events/:id',authenticateToken,eventController.deleteEvent);
 router.post('/events/:id/participants',eventParticipantController.addParticipantsController);
-router.delete('/events/:id/participants/:participantId',eventParticipantController.removeParticipantController);
+router.delete('/events/:id/participants/:participantId',eventRateLimiter,eventParticipantController.removeParticipantController);
 
 module.exports = router
