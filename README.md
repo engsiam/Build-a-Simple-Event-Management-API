@@ -227,12 +227,9 @@ You can import this [Postman collection](#) to test the API endpoints easily.
 
 ## **Handling Large Data**
 
-- **Pagination:** Implemented in the `GET /events` endpoint to handle large datasets efficiently.
+- **Pagination:** Implemented in the `GET /events?limit=5` endpoint to handle large datasets efficiently.
 - **Optimized Queries:** Database queries are optimized to handle a large number of participants and events.
 
-## **Contributing**
-
-If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
 ## **License**
 
